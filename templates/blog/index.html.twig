@@ -13,6 +13,7 @@
                 <th>Description</th>
                 <th>Image</th>
                 <th>Date</th>
+                <th>Show_home</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ blog.description }}</td>
                 <td>{{ blog.image }}</td>
                 <td>{{ blog.date ? blog.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ blog.showHome ? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ path('blog_show', {'id': blog.id}) }}">show</a>
                     <a href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a>
@@ -31,7 +33,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>

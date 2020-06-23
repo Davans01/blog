@@ -16,6 +16,7 @@ class BlogType extends AbstractType
             ->add('description')
             ->add('image')
             ->add('date')
+            ->add('show_home')
         ;
     }
 

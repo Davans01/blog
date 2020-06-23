@@ -37,6 +37,11 @@ class Blog
      */
     private $date;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $show_home;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Blog
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getShowHome(): ?bool
+    {
+        return $this->show_home;
+    }
+
+    public function setShowHome(bool $show_home): self
+    {
+        $this->show_home = $show_home;
 
         return $this;
     }
